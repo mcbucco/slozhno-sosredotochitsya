@@ -192,10 +192,6 @@
   block-size: 100%;
 }
 
-.in-pictures .main__list {
-  max-block-size: 1048px;
-}
-
 .sunset {
   grid-column: 1 / span 2;
   grid-row: 1 / 2;
