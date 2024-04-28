@@ -11,7 +11,7 @@
   font-family: var(--main-font, 'sans serif');
   font-weight: normal;
   font-size: var(--font-size);
-  /* background-color: var(--background-color); */
+  background-color: var(--background-color);
   background-image: url('../images/cover-image-dark.png');
   background-position: center;
   background-size: cover;
@@ -190,6 +190,10 @@
   object-fit: cover;
   max-inline-size: 100%;
   block-size: 100%;
+}
+
+.in-pictures .main__list {
+  max-block-size: 1048px;
 }
 
 .sunset {
