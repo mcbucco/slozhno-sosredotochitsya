@@ -20,6 +20,7 @@
 
 .header,
 .footer {
+  block-size: 100vh;
   padding: 1.11em;
 }
 
@@ -48,7 +49,7 @@
   border-bottom: 1px solid var(--corners-color);
   border-left: 1px solid var(--corners-color);
   inline-size: 25px;
-  block-size: 25px;  
+  block-size: 25px;
 }
 
 .header__theme-menu {
@@ -64,7 +65,7 @@
 }
 
 .header__theme-menu-item {
-  color: var(--nav-color); 
+  color: var(--nav-color);
 }
 
 .header__theme-menu-button {
@@ -143,7 +144,7 @@
   grid-auto-flow: column;
 }
 
-.main__list { 
+.main__list {
   display: grid;
   gap: 20px;
 }
@@ -332,7 +333,7 @@
     gap: 10px;
   }
 
-  .main__images {
+  .in-pictures .main__list-element {
     grid-column: auto;
     grid-row: auto;
   }
