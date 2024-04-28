@@ -6,6 +6,7 @@
 :root {
   --main-font: 'IBM Plex Mono';
   --font-size: 18px;
+  --background-color: #000028;
   --nav-color: #FF0070;
   --main-title-color: #DB00FF;
   --main-title-shadow-color: var(--nav-color);
