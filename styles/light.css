@@ -6,7 +6,51 @@
 
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
+  Так стили написанные ниже будут иметь больший вес,
+  чем стили в медиазапросе предпочтений пользователя
   */
+  --nav-color: #353430;
+  --main-title-color: #FFC2E6;
+  --main-title-shadow-color: #FF0070;
+  --highlighted-title-color: var(--nav-color);
+  --highlighted-title-background: #FF8DCB;
+  --section-title-color: var(--nav-color);
+  --text-color: var(--nav-color);
+  --link-shadow-color: var(--highlighted-title-background);
+  --footer-color: var(--main-title-color);
+  --footer-shadow: var(--main-title-shadow-color);
+  --corners-color: var(--nav-color);
+  --accent-color: var(--nav-color);
+  --nav-hover-border-color: #32312D66;
+  background-image: url('../images/cover-image-light.png');
+}
+
+.theme_light .rec {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --nav-color: #353430;
+    --main-title-color: #FFC2E6;
+    --main-title-shadow-color: #FF0070;
+    --highlighted-title-color: var(--nav-color);
+    --highlighted-title-background: #FF8DCB;
+    --section-title-color: var(--nav-color);
+    --text-color: var(--nav-color);
+    --link-shadow-color: var(--highlighted-title-background);
+    --footer-color: var(--main-title-color);
+    --footer-shadow: var(--main-title-shadow-color);
+    --corners-color: var(--nav-color);
+    --accent-color: var(--nav-color);
+    --nav-hover-border-color: rgba(#32312D66, 0.4);
+  }
+
+  .page {
+    background-image: url('../images/cover-image-light.png');    
+  }
+
+  .rec {
+    display: none;
+  }
 }

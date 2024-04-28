@@ -9,4 +9,96 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --nav-color: #FF0070;
+  --main-title-color: #DB00FF;
+  --main-title-shadow-color: var(--nav-color);
+  --highlighted-title-color: #000028;
+  --highlighted-title-background: var(--nav-color);
+  --section-title-color: var(--nav-color);
+  --text-color: #F1B2CE;
+  --link-shadow-color: var(--nav-color);
+  --footer-color: var(--main-title-color);
+  --footer-shadow: var(--nav-color);
+  --corners-color: var(--nav-color);
+  --accent-color: var(--nav-color);
+  --nav-hover-border-color: #FF007066;
+  background-image: url('../images/cover-image-dark.png');
+}
+
+.theme_dark .rec {
+    position: absolute;
+    top: 22px;
+    right: 29px;
+  color: var(--accent-color);
+    text-transform: uppercase;
+}
+
+.rec::after {
+  content: '';
+  position: relative;
+  top: -2px;
+  display: inline-block;
+  margin-inline-start: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
+  inline-size: 9px;
+  block-size: 9px;
+}
+
+@media (max-width: 375px) {
+  .theme_dark .rec {
+    top: 12px;
+    right: 19px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --nav-color: #FF0070;
+  --main-title-color: #DB00FF;
+  --main-title-shadow-color: var(--nav-color);
+  --highlighted-title-color: #000028;
+  --highlighted-title-background: var(--nav-color);
+  --section-title-color: var(--nav-color);
+  --text-color: #F1B2CE;
+  --link-shadow-color: var(--nav-color);
+  --footer-color: var(--main-title-color);
+  --footer-shadow: var(--nav-color);
+  --corners-color: var(--nav-color);
+  --accent-color: var(--nav-color);
+  --nav-hover-border-color: #FF007066;
+  }
+
+  .page {
+    background-image: url('../images/cover-image-dark.png');    
+  }
+
+  .rec {
+    position: absolute;
+    top: 22px;
+    right: 29px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+  }
+  
+  .rec::after {
+    content: '';
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    margin-inline-start: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px 2px var(--accent-color);
+    background-color: var(--accent-color);
+    inline-size: 9px;
+    block-size: 9px;
+  }
+}
+
+@media (prefers-color-scheme: dark) and (max-width: 375px) {
+  .rec {
+    top: 12px;
+    right: 19px;
+  }
 }

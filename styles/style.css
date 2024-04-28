@@ -1,5 +1,345 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+/* * {
+  border: 1px dashed white;
+} */
+
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  display: grid;
+  grid-row-gap: 60px;
+  font-family: var(--main-font, 'sans serif');
+  font-weight: normal;
+  font-size: var(--font-size);
+  /* background-color: var(--background-color); */
+  background-image: url('../images/cover-image-dark.png');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header,
+.footer {
+  padding: 1.11em;
+}
+
+.header {
+  position: relative;
+  display: grid;
+  margin: auto;
+  max-inline-size: 1024px;
+  inline-size: 100%;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: relative;
+  left: calc(100% - 25px);
+  display: inline-block;
+  border-top: 1px solid var(--corners-color);
+  border-right: 1px solid var(--corners-color);
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-zone::after {
+  content: '';
+  display: inline-block;
+  border-bottom: 1px solid var(--corners-color);
+  border-left: 1px solid var(--corners-color);
+  inline-size: 25px;
+  block-size: 25px;  
+}
+
+.header__theme-menu {
+  position: relative;
+  top: -25px;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 0.55em;
+}
+
+.header__theme-menu-item {
+  color: var(--nav-color); 
+}
+
+.header__theme-menu-button {
+  border: none;
+  padding: .08em 0.72em;
+  text-transform: lowercase;
+  background-color: inherit;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--nav-hover-border-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--nav-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+  pointer-events: none;
+}
+
+.header__title {
+  position: relative;
+  right: 1rem;
+  padding-block-start: 22%;
+  color: var(--main-title-color);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  line-height: 1.21em;
+  text-shadow: 4px 4px 0 var(--main-title-shadow-color);
+}
+
+.header__title-description {
+  justify-self: end;
+  margin-block-start: 8.5%;
+  margin-block-end: 9%;
+  max-inline-size: 50%;
+}
+
+.title-decor {
+  color: var(--highlighted-title-color);
+  font-weight: 700;
+  font-size: inherit;
+  line-height: 1.3em;
+  background-color: var(--highlighted-title-background);
+}
+
+.main {
+  display: grid;
+  grid-row-gap: 80px;
+  margin: auto;
+  padding-inline-start: 1.11em;
+  padding-inline-end: 1.11em;
+  max-inline-size: 1024px;
+}
+
+.main__section {
+  display: grid;
+  gap: 20px;
+}
+
+.main__section-title {
+  color: var(--section-title-color);
+  font-size: var(--font-size);
+  line-height: 1.3em;
+  max-inline-size: 315px;
+}
+
+.why-so-hard,
+.concentration-improvers {
+  grid-template-columns: 1fr 2fr;
+  grid-auto-flow: column;
+}
+
+.main__list { 
+  display: grid;
+  gap: 20px;
+}
+
+.main__list-element-text {
+  margin-block-start: 10px;
+  color: var(--text-color);
+  line-height: 1.3em;
+}
+
+.main__list-element-link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--link-shadow-color);
+}
+
+.main__list-element-link:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.main__list-element-link:focus {
+  outline: none;
+}
+
+.main__list-element-link:focus-visible {
+  outline: 1px solid var(--text-color);
+  outline-offset: -1px;
+}
+
+.concentration-eaters {
+  grid-auto-flow: row;
+}
+
+.concentration-eaters .main__list,
+.in-pictures .main__list {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.main__list-element-subtitle {
+  font-weight: normal;
+}
+
+.main__images {
+  object-fit: cover;
+  max-inline-size: 100%;
+  block-size: 100%;
+}
+
+.sunset {
+  grid-column: 1 / span 2;
+  grid-row: 1 / 2;
+}
+
+.ice-cream {
+  grid-column: 3 / 4;
+  grid-row: 1 / span 2;
+}
+
+.tape {
+  grid-column: 1 / 2;
+  grid-row: 2 / span 2;
+}
+
+.books {
+  grid-column: 2/ 3;
+  grid-row: 2 / 3;
+}
+
+.street {
+  grid-column: 2 / span 2;
+  grid-row: 3 / 4;
+}
+
+.footer {
+  margin: auto;
+  max-inline-size: 1024px;
+  inline-size: 100%;
+}
+
+.focus {
+  display: block;
+  padding-block-start: 27.9%;
+  padding-block-end: 27.9%;
+  color: var(--footer-color);
+  font-weight: 700;
+  font-size: 157px;
+  line-height: .79em;
+  text-align: center;
+  text-shadow: 2px 2px 0 var(--footer-shadow);
+}
+
+@media (max-width: 768px) {
+
+  .header__theme-menu {
+    padding-block-start: 9.55em;
+  }
+
+  .header__theme-menu-list {
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: end;
+    gap: 0.55em;
+  }
+  
+  .header__title {
+    padding-block-start: 17%;
+  }
+
+  .header__title-description {
+    margin-block-start: 19%;
+    margin-block-end: 19%;
+    max-inline-size: 50%;
+  }
+
+  .main__section-title {
+    max-inline-size: 236px;
+  }
+
+  .concentration-eaters .main__list {
+    grid-template-columns: 1fr;
+  }
+
+  .focus {
+    padding-block-start: 56.9%;
+    padding-block-end: 56.9%;
+    font-size: 120px;
+    line-height: 0.825em;
+  }
+}
+
+@media (max-width: 375px) {
+
+  .page {
+    grid-row-gap: 40px;
+  }
+
+  .header,
+  .footer {
+    padding: .55em;
+  }
+
+  .header__theme-menu {
+    padding-block-start: 3.4em;
+  }
+
+  .header__title {
+    /* max-inline-size: 355px; */
+    position: static;
+    padding-block-start: 12%;
+    color: var(--main-title-color);
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    line-height: .825em;
+    text-shadow: 4px 4px 0 var(--main-title-shadow-color);
+  }
+
+  .header__title-description {
+    justify-self: auto;
+    margin-block-start: 15%;
+    margin-block-end: 9%;
+    max-inline-size: 100%;
+  }
+
+  .main {
+    grid-row-gap: 50px;
+    margin: auto;
+    padding-inline-start: .55em;
+    padding-inline-end: .55em;
+  }
+
+  .main__section-title {
+    max-inline-size: 100%;
+  }
+
+  .why-so-hard,
+  .concentration-eaters,
+  .concentration-improvers {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+  }
+
+  .in-pictures {
+    gap: 10px;
+  }
+
+  .in-pictures .main__list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .main__images {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .focus {
+    padding-block-start: 69.9%;
+    padding-block-end: 69.9%;
+    font-size: 116px;
+  }
 }
