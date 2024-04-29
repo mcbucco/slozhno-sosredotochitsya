@@ -307,6 +307,7 @@
   .header__title {
     grid-column: 1;
     align-self: baseline;
+    position: static;
   }
 
   .decorated-zone::before {
@@ -320,10 +321,6 @@
   .header__theme-menu {
     grid-column: 1;
     grid-row: 2;
-  }
-
-  .header__title {
-    position: static;
   }
 
   .header__title-description {
