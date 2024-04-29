@@ -10,6 +10,7 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --background-color: #000028;
+  --cover-image: url('../images/cover-image-dark.png');
   --nav-color: #FF0070;
   --main-title-color: #DB00FF;
   --main-title-shadow-color: var(--nav-color);
@@ -23,14 +24,14 @@
   --corners-color: var(--nav-color);
   --accent-color: var(--nav-color);
   --nav-hover-border-color: #FF007066;
-  background-image: url('../images/cover-image-dark.png');
 }
 
 .theme_dark .rec {
+    display: block;
     position: absolute;
     top: 22px;
     right: 29px;
-  color: var(--accent-color);
+    color: var(--accent-color);
     text-transform: uppercase;
 }
 
@@ -57,6 +58,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #000028;
+    --cover-image: url('../images/cover-image-dark.png');
     --nav-color: #FF0070;
     --main-title-color: #DB00FF;
     --main-title-shadow-color: var(--nav-color);
@@ -70,10 +72,6 @@
     --corners-color: var(--nav-color);
     --accent-color: var(--nav-color);
     --nav-hover-border-color: #FF007066;
-  }
-
-  .page {
-    background-image: url('../images/cover-image-dark.png');
   }
 
   .rec {
