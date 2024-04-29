@@ -365,9 +365,4 @@
     grid-column: auto;
     grid-row: auto;
   }
-
-  .focus {
-    padding-block-start: 69.9%;
-    padding-block-end: 69.9%;
-  }
 }
