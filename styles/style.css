@@ -1,8 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-* {
+/* * {
   border: 1px dashed white;
-}
+} */
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
@@ -23,7 +23,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 2fr 1fr 2fr;
-  margin: auto;
+  /* margin: auto; */
   padding: 1.11em;
   block-size: 100vh;
   min-block-size: 668px;
