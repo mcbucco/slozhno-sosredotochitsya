@@ -23,7 +23,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 2fr 1fr 2fr;
-  /* margin: auto; */
+  margin: auto;
   padding: 1.11em;
   block-size: 100vh;
   min-block-size: 668px;
