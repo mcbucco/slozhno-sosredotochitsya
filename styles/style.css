@@ -1,8 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-/* * {
+* {
   border: 1px dashed white;
-} */
+}
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
@@ -241,7 +241,8 @@
 
 @media (max-width: 800px) {
 
-  .header {
+  .header,
+  .footer {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1.5fr 1.5fr 1.5fr 1fr 4.5fr;
   }
@@ -288,10 +289,16 @@
   .concentration-eaters .main__list {
     grid-template-columns: 1fr;
   }
-
-  .focus {
-    grid-row: 4;
+  
+  .footer {
+    grid-template-rows: repeat(5, 1fr);
   }
+  
+  .focus {
+    grid-row: 3;
+    align-self: center;
+  }
+
 }
 
 @media (max-width: 425px) {
@@ -303,8 +310,11 @@
   .header,
   .footer {
     grid-template-columns: 1fr;
-    grid-template-rows: .65fr 1fr 0.7fr 2fr 2.3fr;
     padding: .55em;
+  }
+  
+  .header {
+    grid-template-rows: .65fr 1fr 0.7fr 2fr 2.3fr;
   }
 
   .header__title {
@@ -364,15 +374,6 @@
   .in-pictures .main__list-element {
     grid-column: auto;
     grid-row: auto;
-  }
-
-  .footer {
-    grid-template-rows: repeat(5, 1fr);
-  }
-
-  .focus {
-    grid-row: 3;
-    align-self: center;
   }
 
 }
