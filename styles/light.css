@@ -19,7 +19,6 @@
   --section-title-color: var(--nav-color);
   --text-color: var(--nav-color);
   --link-shadow-color: var(--highlighted-title-background);
-  --footer-color: var(--main-title-color);
   --footer-shadow: var(--main-title-shadow-color);
   --corners-color: var(--nav-color);
   --accent-color: var(--nav-color);
@@ -41,8 +40,7 @@
     --highlighted-title-background: #FF8DCB;
     --section-title-color: var(--nav-color);
     --text-color: var(--nav-color);
-    --link-shadow-color: var(--highlighted-title-background);
-    --footer-color: var(--main-title-color);
+    --link-shadow-color: var(--highlighted-title-background);   
     --footer-shadow: var(--main-title-shadow-color);
     --corners-color: var(--nav-color);
     --accent-color: var(--nav-color);

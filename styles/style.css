@@ -10,9 +10,9 @@
   grid-row-gap: 60px;
   font-family: var(--main-font, monospace, sans-serif);
   font-weight: normal;
-  font-size: var(--font-size);
-  background-color: var(--background-color);
-  background-image: var(--cover-image);
+  font-size: var(--font-size, 18px);
+  background-color: var(--background-color, #000028);
+  background-image: var(--cover-image, url('../images/cover-image-dark.png'));
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -40,8 +40,8 @@
   display: inline-block;
   grid-column: 3;
   justify-self: end;
-  border-top: 1px solid var(--corners-color);
-  border-right: 1px solid var(--corners-color);
+  border-top: 1px solid var(--corners-color, #FF0070);
+  border-right: 1px solid var(--corners-color, #FF0070);
   inline-size: 25px;
   block-size: 25px;
 }
@@ -51,8 +51,8 @@
   display: inline-block;
   grid-row: 3;
   align-self: end;
-  border-bottom: 1px solid var(--corners-color);
-  border-left: 1px solid var(--corners-color);
+  border-bottom: 1px solid var(--corners-color, #FF0070);
+  border-left: 1px solid var(--corners-color, #FF0070);
   inline-size: 25px;
   block-size: 25px;
 }
@@ -71,7 +71,7 @@
 }
 
 .header__theme-menu-item {
-  color: var(--nav-color);
+  color: var(--nav-color, #FF0070);
 }
 
 .header__theme-menu-button {
@@ -83,7 +83,7 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--nav-hover-border-color);
+  border: 1px solid var(--nav-hover-border-color, #FF007066);
 }
 
 .header__theme-menu-button:focus {
@@ -91,11 +91,11 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--nav-color);
+  border-bottom: 1px solid var(--nav-color, #FF0070);
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--accent-color, #FF0070);
   pointer-events: none;
 }
 
@@ -105,13 +105,13 @@
   grid-column: 1 / 4;
   grid-row: 2;
   align-self: center;
-  text-shadow: 4px 4px 0 var(--main-title-shadow-color);
+  text-shadow: 4px 4px 0 var(--main-title-shadow-color, #FF0070);
 }
 
 .page-title {
-  color: var(--main-title-color);
+  color: var(--main-title-color, #DB00FF);
   font-weight: 700;
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-size: var(--title-font-size-large, clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem));
   line-height: .825em;
 }
 
@@ -124,11 +124,11 @@
 }
 
 .title-decor {
-  color: var(--highlighted-title-color);
+  color: var(--highlighted-title-color, #000028);
   font-weight: 700;
   font-size: inherit;
   line-height: 1.3em;
-  background-color: var(--highlighted-title-background);
+  background-color: var(--highlighted-title-background, #FF0070);
 }
 
 .main {
@@ -146,8 +146,8 @@
 }
 
 .main__section-title {
-  color: var(--section-title-color);
-  font-size: var(--font-size);
+  color: var(--section-title-color, #FF0070);
+  font-size: var(--font-size, 18px);
   line-height: 1.3em;
   max-inline-size: 315px;
 }
@@ -165,17 +165,17 @@
 
 .main__list-element-text {
   margin-block-start: 10px;
-  color: var(--text-color);
+  color: var(--text-color, #F1B2CE);
   line-height: 1.3em;
 }
 
 .main__list-element-link {
   text-decoration: none;
-  text-shadow: 2px 2px 0 var(--link-shadow-color);
+  text-shadow: 2px 2px 0 var(--link-shadow-color, #FF0070);
 }
 
 .main__list-element-link:hover {
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color, #F1B2CE);
 }
 
 .main__list-element-link:focus {
@@ -183,7 +183,7 @@
 }
 
 .main__list-element-link:focus-visible {
-  outline: 1px solid var(--text-color);
+  outline: 1px solid var(--text-color, #F1B2CE);
   outline-offset: -1px;
 }
 
@@ -236,7 +236,7 @@
   grid-column: 1 / 4;
   grid-row: 2;
   text-align: center;
-  text-shadow: 2px 2px 0 var(--footer-shadow);
+  text-shadow: 2px 2px 0 var(--footer-shadow, #FF0070);
 }
 
 @media (max-width: 800px) {
@@ -301,7 +301,7 @@
 
 }
 
-@media (max-width: 425px) {
+@media (max-width: 450px) {
 
   .page {
     grid-row-gap: 40px;
@@ -341,7 +341,7 @@
   }
 
   .page-title {
-    font-size: var(--title-font-size-small);
+    font-size: var(--title-font-size-small, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
   }
 
   .main {
